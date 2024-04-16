@@ -51,7 +51,7 @@ export const meta = mergeMeta<{}, { 'routes/anime+/$animeId': typeof animeIdLoad
       },
       {
         property: 'og:url',
-        content: `https://anime-nexus-six.vercel.app/anime/${params.animeId}/episodes`,
+        content: `https://anime-nexus-six.vercel.app/en/anime/${params.animeId}/episodes`,
       },
       { property: 'og:title', content: `Sora - ${animeTitle} - Episodes` },
       {

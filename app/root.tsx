@@ -396,7 +396,7 @@ function useDetectSWUpdate() {
 
 const Document = ({ children, title }: DocumentProps) => {
   const location = useLocation();
-  const { locale, gaTrackingId, ENV } = useLoaderData<typeof loader>();
+  const { locale, gaTrackingId, ENV } = useLoaderData<typeof loader>() || 'en';
   const { i18n } = useTranslation();
   const isBot = useIsBot();
   const isHydrated = useHydrated();
