@@ -47,18 +47,21 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
       name: 'keywords',
       content: `Watch ${movieTitle}, Stream ${movieTitle}, Watch ${movieTitle} HD, Online ${movieTitle}, Streaming ${movieTitle}, English, Subtitle ${movieTitle}, English Subtitle`,
     },
-    { property: 'og:url', content: `https://sorachill.vercel.app/movies/${params.movieId}/watch` },
+    {
+      property: 'og:url',
+      content: `https://anime-nexus-six.vercel.app/movies/${params.movieId}/watch`,
+    },
     { property: 'og:title', content: `Sora - Watch ${movieTitle}` },
     { property: 'og:description', content: overview },
     {
       property: 'og:image',
-      content: `https://sorachill.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
+      content: `https://anime-nexus-six.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
     },
     { name: 'twitter:title', content: `Sora - Watch ${movieTitle}` },
     { name: 'twitter:description', content: overview },
     {
       name: 'twitter:image',
-      content: `https://sorachill.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
+      content: `https://anime-nexus-six.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
     },
   ];
 });

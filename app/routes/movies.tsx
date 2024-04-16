@@ -11,8 +11,8 @@ export const meta = mergeMeta(() => [
     content:
       'watch free movies, free movies to watch online, watch movies online free, free movies streaming, free movies full, free movies download, watch movies hd, movies to watch, hd movies, stream movies, movies to stream, watch movies free',
   },
-  { property: 'og:image', content: 'https://sorachill.vercel.app/api/ogimage?it=movies' },
-  { name: 'twitter:image', content: 'https://sorachill.vercel.app/api/ogimage?it=movies' },
+  { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=movies' },
+  { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=movies' },
 ]);
 
 export const handle: Handle = {

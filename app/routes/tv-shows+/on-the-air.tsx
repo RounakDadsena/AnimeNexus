@@ -19,7 +19,7 @@ import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 export const meta = mergeMeta(() => [
   { title: 'Sora - On air Tv Shows' },
   { name: 'description', content: 'On air Tv Shows' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/tv-shows/on-the-air' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/tv-shows/on-the-air' },
   { property: 'og:title', content: 'Sora - On air Tv Shows' },
   { property: 'og:description', content: 'On air Tv Shows' },
   { name: 'twitter:title', content: 'Sora - On air Tv Shows' },

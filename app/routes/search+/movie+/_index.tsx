@@ -41,7 +41,7 @@ export const meta = mergeMeta(() => [
   { name: 'description', content: 'Search Movies on Sora' },
   {
     property: 'og:url',
-    content: 'https://sorachill.vercel.app/search/movie/ ',
+    content: 'https://anime-nexus-six.vercel.app/search/movie/ ',
   },
   { property: 'og:title', content: 'Sora - Search Movies' },
   { property: 'og:description', content: 'Search Movies on Sora' },

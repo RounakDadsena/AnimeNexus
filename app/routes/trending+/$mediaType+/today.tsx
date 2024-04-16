@@ -23,7 +23,10 @@ export const meta = mergeMeta(({ params }) => {
       name: 'keywords',
       content: `trending, trending ${mediaType}, trending today, trending ${mediaType} today`,
     },
-    { property: 'og:url', content: `https://sorachill.vercel.app/trending/${mediaType}/today` },
+    {
+      property: 'og:url',
+      content: `https://anime-nexus-six.vercel.app/trending/${mediaType}/today`,
+    },
     { property: 'og:title', content: `Sora - Trending ${mediaType} today` },
     { name: 'description', content: `Trending ${mediaType} today` },
     { property: 'og:description', content: `Trending ${mediaType} today` },

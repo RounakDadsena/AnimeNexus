@@ -18,7 +18,7 @@ import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 export const meta = mergeMeta(() => [
   { title: 'Sora - Now Playing Movies' },
   { name: 'description', content: 'Now Playing Movies' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/movies/now-playing' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/movies/now-playing' },
   { property: 'og:title', content: 'Sora - Now Playing Movies' },
   { property: 'og:description', content: 'Now Playing Movies' },
   { name: 'twitter:title', content: 'Sora - Now Playing Movies' },

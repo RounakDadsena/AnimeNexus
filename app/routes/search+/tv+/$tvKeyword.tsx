@@ -45,7 +45,10 @@ export const meta = mergeMeta(({ data, params }) => {
       name: 'keywords',
       content: `Watch ${params.tvKeyword}, Stream ${params.tvKeyword}, Watch ${params.tvKeyword} HD, Online ${params.tvKeyword}, Streaming ${params.tvKeyword}, English, Subtitle ${params.tvKeyword}, English Subtitle`,
     },
-    { property: 'og:url', content: `https://sorachill.vercel.app/search/tv/${params.tvKeyword}` },
+    {
+      property: 'og:url',
+      content: `https://anime-nexus-six.vercel.app/search/tv/${params.tvKeyword}`,
+    },
     { property: 'og:title', content: `Sora - Search results for ${params.tvKeyword}` },
     {
       property: 'og:image',

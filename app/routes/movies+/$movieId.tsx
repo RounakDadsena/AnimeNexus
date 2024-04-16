@@ -135,7 +135,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
     { name: 'twitter:description', content: overview },
     {
       property: 'og:image',
-      content: `https://sorachill.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
+      content: `https://anime-nexus-six.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
     },
     {
       name: 'keywords',
@@ -143,7 +143,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
     },
     {
       name: 'twitter:image',
-      content: `https://sorachill.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
+      content: `https://anime-nexus-six.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
     },
   ];
 });

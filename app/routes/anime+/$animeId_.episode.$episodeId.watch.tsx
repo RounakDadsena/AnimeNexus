@@ -720,7 +720,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
     },
     {
       property: 'og:url',
-      content: `http://localhost:3000/anime/${params.animeId}/episode/${params.episodeId}/watch`,
+      content: `https://anime-nexus-six.vercel.app/anime/${params.animeId}/episode/${params.episodeId}/watch`,
     },
     {
       property: 'og:title',

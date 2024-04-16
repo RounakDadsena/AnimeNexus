@@ -18,13 +18,13 @@ import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 export const meta = mergeMeta(() => [
   { title: 'Sora - Discover tv shows' },
   { name: 'description', content: 'Discover tv shows on Sora' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/discover/tv-shows' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/discover/tv-shows' },
   { property: 'og:title', content: 'Sora - Discover tv shows' },
-  { property: 'og:image', content: 'https://sorachill.vercel.app/api/ogimage?it=tvshows' },
+  { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=tvshows' },
   { property: 'og:description', content: 'Discover tv shows on Sora' },
   { name: 'twitter:title', content: 'Sora - Discover tv shows' },
   { name: 'twitter:description', content: 'Discover tv shows on Sora' },
-  { name: 'twitter:image', content: 'https://sorachill.vercel.app/api/ogimage?it=tvshows' },
+  { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=tvshows' },
 ]);
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {

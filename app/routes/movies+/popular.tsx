@@ -18,7 +18,7 @@ import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 export const meta = mergeMeta(() => [
   { title: 'Sora - Popular Movies' },
   { name: 'description', content: 'Popular Movies' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/movies/popular' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/movies/popular' },
   { property: 'og:title', content: 'Sora - Popular Movies' },
   { property: 'og:description', content: 'Popular Movies' },
   { name: 'twitter:title', content: 'Sora - Popular Movies' },

@@ -79,7 +79,8 @@ const vercelUrl = process.env.VERCEL_URL || '';
 const fixedVercelUrl = vercelUrl.startsWith('https') ? vercelUrl : `https://${vercelUrl}`;
 
 const config = {
-  selfUrl: process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : fixedVercelUrl,
+  selfUrl:
+    process.env.NODE_ENV === 'development' ? 'https://anime-nexus-six.vercel.app/' : fixedVercelUrl,
   cache: new CustomDiskCache({
     path: path.join(os.tmpdir(), 'img'),
   }),

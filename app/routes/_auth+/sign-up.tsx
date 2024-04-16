@@ -25,7 +25,7 @@ export const meta = mergeMeta(() => [
   { name: 'description', content: 'Sign up for a Sora account.' },
   { property: 'og:title', content: 'Sora - Sign Up' },
   { property: 'og:description', content: 'Sign up for a Sora account.' },
-  { property: 'og:url', content: 'http://localhost:3000/sign-up' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/sign-up' },
   { property: 'twitter:title', content: 'Sora - Sign Up' },
   { property: 'twitter:description', content: 'Sign up for a Sora account.' },
 ]);

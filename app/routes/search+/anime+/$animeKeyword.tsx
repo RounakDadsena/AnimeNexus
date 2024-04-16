@@ -44,7 +44,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
     },
     {
       property: 'og:url',
-      content: `https://sorachill.vercel.app/search/anime/${params.animeKeyword}`,
+      content: `https://anime-nexus-six.vercel.app/search/anime/${params.animeKeyword}`,
     },
     { property: 'og:title', content: `Sora - Search results for ${params.animeKeyword}` },
     {

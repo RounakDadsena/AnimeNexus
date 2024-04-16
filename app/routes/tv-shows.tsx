@@ -11,8 +11,8 @@ export const meta = mergeMeta(() => [
     content:
       'watch free tv shows, free tv shows to watch online, watch tv shows online free, free tv shows streaming, free tv shows full, free tv shows download, watch tv shows hd, tv shows to watch, hd tv shows, stream tv shows, tv shows to stream, watch tv shows free',
   },
-  { property: 'og:image', content: 'https://sorachill.vercel.app/api/ogimage?it=tvshows' },
-  { name: 'twitter:image', content: 'https://sorachill.vercel.app/api/ogimage?it=tvshows' },
+  { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=tvshows' },
+  { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=tvshows' },
 ]);
 
 export const handle: Handle = {

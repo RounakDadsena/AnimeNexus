@@ -7,7 +7,7 @@ import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 export const meta = mergeMeta(() => [
   { title: 'Sora - Trending' },
   { name: 'keywords', content: 'trending, trending movies, trending tv shows, trending anime' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/trending/' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/trending/' },
   { property: 'og:title', content: 'Sora - Trending' },
   { name: 'description', content: 'Trending' },
   { property: 'og:description', content: 'Trending' },

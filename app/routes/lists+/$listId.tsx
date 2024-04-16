@@ -32,7 +32,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
     { name: 'keywords', content: `${detail?.name || ''}` },
     {
       property: 'og:url',
-      content: `https://sorachill.vercel.app/lists/${params.listId}`,
+      content: `https://anime-nexus-six.vercel.app/lists/${params.listId}`,
     },
     { property: 'og:title', content: `Sora - ${detail?.name || ''}` },
     { property: 'og:description', content: `${detail?.description || ''}` },

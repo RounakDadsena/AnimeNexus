@@ -18,7 +18,7 @@ import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 export const meta = mergeMeta(() => [
   { title: 'Sora - Top Rated Tv Shows' },
   { name: 'description', content: 'Top Rated Tv Shows' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/tv-shows/top-rated' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/tv-shows/top-rated' },
   { property: 'og:title', content: 'Sora - Top Rated Tv Shows' },
   { property: 'og:description', content: 'Top Rated Tv Shows' },
   { name: 'twitter:title', content: 'Sora - Top Rated Tv Shows' },

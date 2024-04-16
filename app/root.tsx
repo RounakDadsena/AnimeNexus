@@ -222,9 +222,9 @@ export const meta: MetaFunction<typeof loader> = () => [
     content:
       'Sora, Sora Movies, Sora Series, Sora Anime, Sora Chill, SoraChill, watch movies, watch series, watch anime, watch movies online, watch series online, watch anime online, free movies, free series, free anime, free movies online, free series online, free anime online, watch movies free, watch series free, watch anime free, watch movies online free, watch series online free, watch anime online free',
   },
-  { property: 'og:url', content: 'https://sorachill.vercel.app' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app' },
   { property: 'og:title', content: 'Sora' },
-  { property: 'og:image', content: 'https://sorachill.vercel.app/api/ogimage?it=home' },
+  { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=home' },
   { property: 'og:description', content: 'Watching movies, series, anime and more in Sora' },
   { property: 'og:type', content: 'website' },
   { property: 'og:site_name', content: 'Sora' },
@@ -232,7 +232,7 @@ export const meta: MetaFunction<typeof loader> = () => [
   { property: 'og:image:height', content: '630' },
   { name: 'twitter:card', content: 'summary_large_image' },
   { name: 'twitter:site', content: '@sora' },
-  { name: 'twitter:image', content: 'https://sorachill.vercel.app/api/ogimage?it=home' },
+  { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=home' },
   { name: 'twitter:title', content: 'Sora' },
   { name: 'twitter:description', content: 'Watching movies, series, anime and more in Sora' },
 ];

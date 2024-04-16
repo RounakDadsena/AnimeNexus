@@ -26,7 +26,7 @@ export const meta = mergeMeta<
     { title: `Sora - ${name} ${seasonDetail?.name || ''}` },
     {
       property: 'og:url',
-      content: `https://sorachill.vercel.app/tv-shows/${params.tvId}/season/${params.seasonId}/`,
+      content: `https://anime-nexus-six.vercel.app/tv-shows/${params.tvId}/season/${params.seasonId}/`,
     },
     { property: 'og:title', content: `Sora - ${name} ${seasonDetail?.name || ''}` },
     { name: 'twitter:title', content: `Sora - ${name} ${seasonDetail?.name || ''}` },

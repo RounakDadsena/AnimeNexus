@@ -511,7 +511,7 @@ const BannerItemDesktop = (props: IBannerItemDesktopProps) => {
                   cc_load_policy: 0,
                   playsinline: 1,
                   mute: 1,
-                  origin: 'http://localhost:3000',
+                  origin: 'https://anime-nexus-six.vercel.app/',
                 },
               }}
               onReady={({ target }) => {
@@ -567,7 +567,7 @@ const BannerItemDesktop = (props: IBannerItemDesktopProps) => {
                   cc_load_policy: 0,
                   playsinline: 1,
                   mute: 1,
-                  origin: 'https://sorachill.vercel.app',
+                  origin: 'https://anime-nexus-six.vercel.app',
                 },
               }}
               onReady={({ target }) => {

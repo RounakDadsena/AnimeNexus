@@ -11,8 +11,8 @@ export const meta = mergeMeta(() => [
     content:
       'watch free anime, free anime to watch online, watch anime online free, free anime streaming, free anime full, free anime download, watch anime hd, anime to watch, hd anime, stream anime, anime to stream, watch anime free',
   },
-  { property: 'og:image', content: 'https://sorachill.vercel.app/api/ogimage?it=anime' },
-  { name: 'twitter:image', content: 'https://sorachill.vercel.app/api/ogimage?it=anime' },
+  { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=anime' },
+  { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=anime' },
 ]);
 
 export const handle: Handle = {

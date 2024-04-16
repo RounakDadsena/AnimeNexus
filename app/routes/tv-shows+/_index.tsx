@@ -16,7 +16,7 @@ import MediaList from '~/components/media/MediaList';
 export const meta = mergeMeta(() => [
   { title: 'Sora - Tv Shows' },
   { name: 'description', content: 'Discover tv shows in Sora' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/tv-shows/' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/tv-shows/' },
   { property: 'og:title', content: 'Sora - Tv Shows' },
   { property: 'og:description', content: 'Discover tv shows in Sora' },
   { name: 'twitter:title', content: 'Sora - Tv Shows' },

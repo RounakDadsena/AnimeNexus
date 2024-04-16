@@ -46,7 +46,7 @@ export const meta = mergeMeta<null, { 'routes/people+/$peopleId': typeof peopleI
       { title: `Sora - ${peopleTitle} - Credits` },
       {
         property: 'og:url',
-        content: `https://sorachill.vercel.app/people/${params.peopleId}/credits`,
+        content: `https://anime-nexus-six.vercel.app/people/${params.peopleId}/credits`,
       },
       { property: 'og:title', content: `Sora - ${peopleTitle} - Credits` },
       { name: 'twitter:title', content: `Sora - ${peopleTitle} - Credits` },

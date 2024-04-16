@@ -20,13 +20,13 @@ export const meta = mergeMeta(() => [
     content:
       'popular celebrities, popular celebrity, top celebrities, top celebrity, people celebrity, celebrity people, best celebrity, best celebrities, famous celebrity, famous people, celebrity movies, movies by celebrity, celebrity tv shows, tv show celebrities, celebrity television shows, celebrity tv series',
   },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/people' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/people' },
   { property: 'og:title', content: 'Sora - Popular People' },
-  { property: 'og:image', content: 'https://sorachill.vercel.app/api/ogimage?it=people' },
+  { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=people' },
   { property: 'og:description', content: 'Discover the most popular celebrities on Sora.' },
   { name: 'twitter:title', content: 'Sora - Popular People' },
   { name: 'twitter:description', content: 'Discover the most popular celebrities on Sora.' },
-  { name: 'twitter:image', content: 'https://sorachill.vercel.app/api/ogimage?it=people' },
+  { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=people' },
 ]);
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {

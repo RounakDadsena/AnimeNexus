@@ -38,7 +38,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 export const meta = mergeMeta(() => [
   { title: 'Sora - Search People' },
   { name: 'description', content: 'Search People on Sora' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/search/people/' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/search/people/' },
   { property: 'og:title', content: 'Sora - Search People' },
   { property: 'og:description', content: 'Search People on Sora' },
   { name: 'twitter:title', content: 'Sora - Search People' },

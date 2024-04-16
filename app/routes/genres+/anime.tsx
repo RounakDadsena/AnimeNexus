@@ -14,13 +14,13 @@ import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 export const meta = mergeMeta(() => [
   { title: 'Sora Anime - Genres' },
   { name: 'description', content: 'Anime Genres' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/genres/anime' },
+  { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/genres/anime' },
   { property: 'og:title', content: 'Sora Anime - Genres' },
-  { property: 'og:image', content: 'https://sorachill.vercel.app/api/ogimage?it=anime' },
+  { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=anime' },
   { property: 'og:description', content: 'Anime Genres' },
   { name: 'twitter:title', content: 'Sora Anime - Genres' },
   { name: 'twitter:description', content: 'Anime Genres' },
-  { name: 'twitter:image', content: 'https://sorachill.vercel.app/api/ogimage?it=anime' },
+  { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=anime' },
 ]);
 
 export const handle: Handle = {

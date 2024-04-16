@@ -4,7 +4,7 @@ import type { LoaderFunctionArgs } from '@remix-run/node';
 
 export function loader({ request }: LoaderFunctionArgs) {
   return generateSitemap(request, routes, {
-    siteUrl: 'https://sorachill.vercel.app',
+    siteUrl: 'https://anime-nexus-six.vercel.app',
     headers: {
       'Cache-Control': `public, max-age=${60 * 5}`,
     },

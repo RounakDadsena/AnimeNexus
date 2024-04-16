@@ -56,7 +56,7 @@ export const meta = mergeMeta<typeof loader, { 'routes/tv-shows+/$tvId': typeof 
       { property: 'og:title', content: `Sora - ${name} - Photos` },
       {
         property: 'og:url',
-        content: `https://sorachill.vercel.app/tv-shows/${params.tvId}/photos`,
+        content: `https://anime-nexus-six.vercel.app/tv-shows/${params.tvId}/photos`,
       },
       { property: 'twitter:title', content: `Sora - ${name} - Photos` },
     ];
