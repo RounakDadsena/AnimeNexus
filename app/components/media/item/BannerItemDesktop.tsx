@@ -511,7 +511,7 @@ const BannerItemDesktop = (props: IBannerItemDesktopProps) => {
                   cc_load_policy: 0,
                   playsinline: 1,
                   mute: 1,
-                  origin: 'https://sorachill.vercel.app',
+                  origin: 'http://localhost:3000',
                 },
               }}
               onReady={({ target }) => {

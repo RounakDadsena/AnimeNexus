@@ -67,7 +67,7 @@ export const getAnimeRecentEpisodes = async (
     request: undefined,
     getFreshValue: async () => {
       try {
-        const res = await anilist.fetchRecentEpisodes(provider, page, perPage);
+        const res = await anilist.fetchRecentEpisodes(provider, page);
         return res;
       } catch (error) {
         console.error(error);

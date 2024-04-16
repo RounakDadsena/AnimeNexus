@@ -22,7 +22,7 @@ export const meta = mergeMeta(() => [
   { name: 'description', content: 'Sign in to your Sora account.' },
   { property: 'og:title', content: 'Sora - Sign In' },
   { property: 'og:description', content: 'Sign in to your Sora account.' },
-  { property: 'og:url', content: 'https://sorachill.vercel.app/sign-in' },
+  { property: 'og:url', content: 'http://localhost:3000/sign-in' },
   { property: 'twitter:title', content: 'Sora - Sign In' },
   { property: 'twitter:description', content: 'Sign in to your Sora account.' },
 ]);
