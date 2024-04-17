@@ -1,5 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { Skeleton } from '@nextui-org/skeleton';
 import { useMediaQuery } from '@react-hookz/web';
+import LazyLoad from 'react-lazyload';
 
 import type { Title } from '~/types/media';
 import type { ITrailer } from '~/services/consumet/anilist/anilist.types';
@@ -42,37 +44,41 @@ const BannerItem = (props: IBannerItemProps) => {
   const isSm = useMediaQuery('(max-width: 650px)', { initializeWithValue: false });
   if (isSm === true) {
     return (
-      <BannerItemMobile
-        active={active}
-        posterPath={posterPath}
-        genreIds={genreIds}
-        genresMovie={genresMovie}
-        genresTv={genresTv}
-        id={id}
-        mediaType={mediaType}
-        title={title}
-        voteAverage={voteAverage}
-        genresAnime={genresAnime}
-      />
+      <LazyLoad once>
+        <BannerItemMobile
+          active={active}
+          posterPath={posterPath}
+          genreIds={genreIds}
+          genresMovie={genresMovie}
+          genresTv={genresTv}
+          id={id}
+          mediaType={mediaType}
+          title={title}
+          voteAverage={voteAverage}
+          genresAnime={genresAnime}
+        />
+      </LazyLoad>
     );
   }
   if (isSm === false) {
     return (
-      <BannerItemDesktop
-        active={active}
-        backdropPath={backdropPath}
-        genreIds={genreIds}
-        genresAnime={genresAnime}
-        genresMovie={genresMovie}
-        genresTv={genresTv}
-        id={id}
-        mediaType={mediaType}
-        overview={overview}
-        posterPath={posterPath}
-        title={title}
-        trailer={trailer}
-        voteAverage={voteAverage}
-      />
+      <LazyLoad once>
+        <BannerItemDesktop
+          active={active}
+          backdropPath={backdropPath}
+          genreIds={genreIds}
+          genresAnime={genresAnime}
+          genresMovie={genresMovie}
+          genresTv={genresTv}
+          id={id}
+          mediaType={mediaType}
+          overview={overview}
+          posterPath={posterPath}
+          title={title}
+          trailer={trailer}
+          voteAverage={voteAverage}
+        />
+      </LazyLoad>
     );
   }
   return <Skeleton className="aspect-[4/5] w-full sm:aspect-[16/8]" />;

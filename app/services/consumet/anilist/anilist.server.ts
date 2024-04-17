@@ -353,7 +353,6 @@ export const getAnimeEpisodeInfo = async (
   });
   return results;
 };
-
 export const getAnimeEpisodeStream = async (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   episodeId: any,
@@ -370,6 +369,7 @@ export const getAnimeEpisodeStream = async (
     getFreshValue: async () => {
       try {
         const res = await anilist.fetchEpisodeSources(episodeId, server);
+        console.log(episodeId);
         return res;
       } catch (error) {
         console.error(error);
