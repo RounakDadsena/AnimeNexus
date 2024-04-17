@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
 import * as React from 'react';
 import FontStyles100 from '@fontsource/sora/100.css';
@@ -33,7 +34,7 @@ import {
   useRouteError,
 } from '@remix-run/react';
 import type { User } from '@supabase/supabase-js';
-// eslint-disable-next-line import/no-extraneous-dependencies, @typescript-eslint/no-unused-vars, prettier/prettier
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/remix';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ThemeProvider as RemixThemesProvider } from 'next-themes';
@@ -242,6 +243,8 @@ export const meta: MetaFunction<typeof loader> = () => [
 export const handle: Handle = {
   breadcrumb: () => (
     <BreadcrumbItem to="/" key="home">
+      <Analytics />
+      <SpeedInsights />
       <Home width={16} height={16} />
     </BreadcrumbItem>
   ),

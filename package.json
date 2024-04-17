@@ -71,6 +71,7 @@
     "@resvg/resvg-js": "^2.6.0",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@supabase/supabase-js": "^2.0.4",
+    "@vercel/analytics": "^1.2.2",
     "@vercel/remix": "^2.1.0",
     "@vercel/speed-insights": "^1.0.10",
     "artplayer": "^5.0.9",
