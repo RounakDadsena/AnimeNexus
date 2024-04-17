@@ -33,6 +33,8 @@ import {
   useRouteError,
 } from '@remix-run/react';
 import type { User } from '@supabase/supabase-js';
+// eslint-disable-next-line import/no-extraneous-dependencies, @typescript-eslint/no-unused-vars, prettier/prettier
+import { SpeedInsights } from '@vercel/speed-insights/remix';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ThemeProvider as RemixThemesProvider } from 'next-themes';
 import NProgress from 'nprogress';

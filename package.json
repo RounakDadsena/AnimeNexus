@@ -22,8 +22,6 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "domhandler": "^5.0.3",
-    "form-data": "^4.0.0",
     "@consumet/extensions": "link:local_modules/@consumet/extensions",
     "@fontsource/sora": "^5.0.14",
     "@lottiefiles/react-lottie-player": "^3.5.3",
@@ -74,6 +72,7 @@
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@supabase/supabase-js": "^2.0.4",
     "@vercel/remix": "^2.1.0",
+    "@vercel/speed-insights": "^1.0.10",
     "artplayer": "^5.0.9",
     "ascii-url-encoder": "^1.2.0",
     "autoprefixer": "^10.4.16",
@@ -84,6 +83,8 @@
     "crypto-js": "^4.1.1",
     "dashjs": "^4.7.2",
     "dayjs": "^1.11.10",
+    "domhandler": "^5.0.3",
+    "form-data": "^4.0.0",
     "framer-motion": "^10.16.4",
     "hls.js": "^1.4.12",
     "i18next": "^23.6.0",

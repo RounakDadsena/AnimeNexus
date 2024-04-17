@@ -155,6 +155,9 @@ dependencies:
   '@vercel/remix':
     specifier: ^2.1.0
     version: 2.1.0(react-dom@18.3.0-canary-db69f95e4-20231002)(react@18.3.0-canary-db69f95e4-20231002)(typescript@5.2.2)
+  '@vercel/speed-insights':
+    specifier: ^1.0.10
+    version: 1.0.10(next@13.4.12)(react@18.3.0-canary-db69f95e4-20231002)
   artplayer:
     specifier: ^5.0.9
     version: 5.0.9
@@ -4846,6 +4849,34 @@ packages:
       react-dom: 18.3.0-canary-db69f95e4-20231002(react@18.3.0-canary-db69f95e4-20231002)
     transitivePeerDependencies:
       - typescript
+    dev: false
+
+  /@vercel/speed-insights@1.0.10(next@13.4.12)(react@18.3.0-canary-db69f95e4-20231002):
+    resolution: {integrity: sha512-4uzdKB0RW6Ff2FkzshzjZ+RlJfLPxgm/00i0XXgxfMPhwnnsk92YgtqsxT9OcPLdJUyVU1DqFlSWWjIQMPkh0g==}
+    requiresBuild: true
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19
+      svelte: ^4
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+    dependencies:
+      next: 13.4.12(@babel/core@7.22.5)(react-dom@18.3.0-canary-db69f95e4-20231002)(react@18.3.0-canary-db69f95e4-20231002)
+      react: 18.3.0-canary-db69f95e4-20231002
     dev: false
 
   /@web3-storage/multipart-parser@1.0.0:
