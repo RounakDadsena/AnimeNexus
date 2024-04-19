@@ -14,10 +14,10 @@ import MediaList from '~/components/media/MediaList';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Featured Lists' },
+  { title: 'AnimeNexus - Featured Lists' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/lists/' },
-  { property: 'og:title', content: 'Sora - Featured Lists' },
-  { name: 'twitter:title', content: 'Sora - Featured Lists' },
+  { property: 'og:title', content: 'AnimeNexus - Featured Lists' },
+  { name: 'twitter:title', content: 'AnimeNexus - Featured Lists' },
 ]);
 
 export const handle: Handle = {

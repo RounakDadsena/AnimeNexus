@@ -16,12 +16,12 @@ import MediaList from '~/components/media/MediaList';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Airing Today Tv Shows' },
+  { title: 'AnimeNexus - Airing Today Tv Shows' },
   { name: 'description', content: 'Airing Today Tv Shows' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/tv-shows/airing-today' },
-  { property: 'og:title', content: 'Sora - Airing Today Tv Shows' },
+  { property: 'og:title', content: 'AnimeNexus - Airing Today Tv Shows' },
   { property: 'og:description', content: 'Airing Today Tv Shows' },
-  { name: 'twitter:title', content: 'Sora - Airing Today Tv Shows' },
+  { name: 'twitter:title', content: 'AnimeNexus - Airing Today Tv Shows' },
   { name: 'twitter:description', content: 'Airing Today Tv Shows' },
 ]);
 

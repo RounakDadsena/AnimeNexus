@@ -10,8 +10,8 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   ]);
   return json(
     {
-      short_name: 'Sora',
-      name: 'Sora',
+      short_name: 'AnimeNexus',
+      name: 'AnimeNexus',
       theme_color: '#0072F5',
       background_color: '#000000',
       display: 'standalone',
@@ -64,21 +64,21 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
           type: 'image/png',
           sizes: '1901x959',
           platform: 'wide',
-          label: 'Homescreen of Sora in darkmode',
+          label: 'Homescreen of AnimeNexus in darkmode',
         },
         {
           src: '/images/screenshot_2.png',
           type: 'image/png',
           sizes: '1280x800',
           platform: 'wide',
-          label: 'Homescreen of Sora in lightmode',
+          label: 'Homescreen of AnimeNexus in lightmode',
         },
         {
           src: '/images/screenshot_3.png',
           type: 'image/png',
           sizes: '482x995',
           platform: 'narrow',
-          label: 'Homescreen of Sora in mobile',
+          label: 'Homescreen of AnimeNexus in mobile',
         },
       ],
       icons: [

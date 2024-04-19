@@ -24,13 +24,13 @@ export const meta = mergeMeta<null, { 'routes/people+/$peopleId': typeof peopleI
     const { name } = detail || {};
     const peopleTitle = name || '';
     return [
-      { title: `Sora - ${peopleTitle}` },
+      { title: `AnimeNexus - ${peopleTitle}` },
       {
         property: 'og:url',
         content: `https://anime-nexus-six.vercel.app/people/${params.peopleId}/`,
       },
-      { property: 'og:title', content: `Sora - ${peopleTitle}` },
-      { name: 'twitter:title', content: `Sora - ${peopleTitle}` },
+      { property: 'og:title', content: `AnimeNexus - ${peopleTitle}` },
+      { name: 'twitter:title', content: `AnimeNexus - ${peopleTitle}` },
     ];
   },
 );

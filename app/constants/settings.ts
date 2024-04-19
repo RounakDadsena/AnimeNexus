@@ -9,11 +9,11 @@ const settingsTab = [
     title: 'appearance',
     disabled: false,
   },
-  // {
-  //   id: 'account-tab',
-  //   title: 'account',
-  //   disabled: true,
-  // },
+  {
+    id: 'account-tab',
+    title: 'account',
+    disabled: false,
+  },
   {
     id: 'player-tab',
     title: 'player',

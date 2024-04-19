@@ -1070,7 +1070,7 @@ const Settings = () => {
                         arial-label="home-page"
                         className="bg-gradient-to-tr from-secondary to-primary to-50% bg-clip-text text-3xl font-bold tracking-normal text-transparent focus:outline-none focus:ring-2 focus:ring-focus md:text-4xl"
                       >
-                        SORA
+                        NEXUS
                       </NavLink>
                     </div>
                     <Spacer y={1} />
@@ -1080,7 +1080,7 @@ const Settings = () => {
                       </Link>
                       <Link
                         isExternal
-                        href="https://raw.githubusercontent.com/Khanhtran47/Sora/master/LICENSE.txt"
+                        href="https://raw.githubusercontent.com/Khanhtran47/AnimeNexus/master/LICENSE.txt"
                       >
                         License 📜
                       </Link>

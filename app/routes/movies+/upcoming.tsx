@@ -16,12 +16,12 @@ import MediaList from '~/components/media/MediaList';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Upcoming Movies' },
+  { title: 'AnimeNexus - Upcoming Movies' },
   { name: 'description', content: 'Upcoming Movies' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/movies/upcoming' },
-  { property: 'og:title', content: 'Sora - Upcoming Movies' },
+  { property: 'og:title', content: 'AnimeNexus - Upcoming Movies' },
   { property: 'og:description', content: 'Upcoming Movies' },
-  { name: 'twitter:title', content: 'Sora - Upcoming Movies' },
+  { name: 'twitter:title', content: 'AnimeNexus - Upcoming Movies' },
   { name: 'twitter:description', content: 'Upcoming Movies' },
 ]);
 

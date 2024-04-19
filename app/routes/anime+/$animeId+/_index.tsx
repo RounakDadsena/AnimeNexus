@@ -28,27 +28,27 @@ export const meta = mergeMeta<{}, { 'routes/anime+/$animeId': typeof animeIdLoad
     const animeTitle =
       title?.userPreferred || title?.english || title?.romaji || title?.native || '';
     return [
-      { title: `Sora - ${animeTitle}` },
+      { title: `AnimeNexus - ${animeTitle}` },
       {
         name: 'description',
         content: description
           ? description?.replace(/<\/?[^>]+(>|$)/g, '')
-          : `Watch ${animeTitle} in Sora`,
+          : `Watch ${animeTitle} in AnimeNexus`,
       },
       { property: 'og:url', content: `https://anime-nexus-six.vercel.app/anime/${params.animeId}` },
-      { property: 'og:title', content: `Sora - ${animeTitle}` },
+      { property: 'og:title', content: `AnimeNexus - ${animeTitle}` },
       {
         property: 'og:description',
         content: description
           ? description?.replace(/<\/?[^>]+(>|$)/g, '')
-          : `Watch ${animeTitle} in Sora`,
+          : `Watch ${animeTitle} in AnimeNexus`,
       },
-      { name: 'twitter:title', content: `Sora - ${animeTitle}` },
+      { name: 'twitter:title', content: `AnimeNexus - ${animeTitle}` },
       {
         name: 'twitter:description',
         content: description
           ? description?.replace(/<\/?[^>]+(>|$)/g, '')
-          : `Watch ${animeTitle} in Sora`,
+          : `Watch ${animeTitle} in AnimeNexus`,
       },
     ];
   },
@@ -179,11 +179,11 @@ const AnimeOverview = () => {
             navigationButtons
           />
         ) : null}
-        {detail?.characters && detail.characters.length > 0 ? (
+        {/*detail?.characters && detail.characters.length > 0 ? (
           <>
             <h2 className="my-5">{t('characters')}</h2>
             <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
-              {detail.characters.slice(0, 12).map((character) => (
+              { detail.characters.slice(0, 12).map((character) => (
                 <Card
                   key={character.id}
                   isHoverable
@@ -267,7 +267,7 @@ const AnimeOverview = () => {
               ))}
             </div>
           </>
-        ) : null}
+        ) : null*/}
         {detail?.recommendations && detail?.recommendations.length > 0 ? (
           <MediaList
             items={detail?.recommendations as IMedia[]}

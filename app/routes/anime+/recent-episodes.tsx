@@ -15,12 +15,12 @@ import MediaList from '~/components/media/MediaList';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Recent Anime Episodes' },
+  { title: 'AnimeNexus - Recent Anime Episodes' },
   { name: 'description', content: 'Recent Anime Episodes' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/anime/recent-episodes' },
-  { property: 'og:title', content: 'Sora - Recent Anime Episodes' },
+  { property: 'og:title', content: 'AnimeNexus - Recent Anime Episodes' },
   { property: 'og:description', content: 'Recent Anime Episodes' },
-  { name: 'twitter:title', content: 'Sora - Recent Anime Episodes' },
+  { name: 'twitter:title', content: 'AnimeNexus - Recent Anime Episodes' },
   { name: 'twitter:description', content: 'Recent Anime Episodes' },
 ]);
 

@@ -52,13 +52,13 @@ export const meta = mergeMeta<
   const { detail, seasonDetail } = tvSeasonData;
   const { name } = detail || {};
   return [
-    { title: `Sora - ${name} ${seasonDetail?.name || ''} - Cast` },
+    { title: `AnimeNexus - ${name} ${seasonDetail?.name || ''} - Cast` },
     {
       property: 'og:url',
       content: `https://anime-nexus-six.vercel.app/tv-shows/${params.tvId}/season/${params.seasonId}/cast`,
     },
-    { property: 'og:title', content: `Sora - ${name} ${seasonDetail?.name || ''} - Cast` },
-    { name: 'twitter:title', content: `Sora - ${name} ${seasonDetail?.name || ''} - Cast` },
+    { property: 'og:title', content: `AnimeNexus - ${name} ${seasonDetail?.name || ''} - Cast` },
+    { name: 'twitter:title', content: `AnimeNexus - ${name} ${seasonDetail?.name || ''} - Cast` },
   ];
 });
 

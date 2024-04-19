@@ -16,6 +16,7 @@ const Image = forwardRef<React.ElementRef<typeof NextuiImage>, ImageProps>(
         (process.env.NODE_ENV === 'development' ? '/api/image' : window.process.env.IMAGE_PROXY);
       return (
         <NextuiImage
+          loading="lazy"
           ref={ref}
           as={RemixImage}
           isLoading={isLoading}

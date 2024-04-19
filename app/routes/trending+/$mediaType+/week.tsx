@@ -18,7 +18,7 @@ import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 export const meta = mergeMeta(({ params }) => {
   const { mediaType } = params;
   return [
-    { title: `Sora - Trending ${mediaType} This Week` },
+    { title: `AnimeNexus - Trending ${mediaType} This Week` },
     {
       name: 'keywords',
       content: `trending, trending ${mediaType}, trending this week, trending ${mediaType} this week`,
@@ -27,10 +27,10 @@ export const meta = mergeMeta(({ params }) => {
       property: 'og:url',
       content: `https://anime-nexus-six.vercel.app/trending/${mediaType}/week`,
     },
-    { property: 'og:title', content: `Sora - Trending ${mediaType} This Week` },
+    { property: 'og:title', content: `AnimeNexus - Trending ${mediaType} This Week` },
     { name: 'description', content: `Trending ${mediaType} This Week` },
     { property: 'og:description', content: `Trending ${mediaType} This Week` },
-    { name: 'twitter:title', content: `Sora - Trending ${mediaType} This Week` },
+    { name: 'twitter:title', content: `AnimeNexus - Trending ${mediaType} This Week` },
     { name: 'twitter:description', content: `Trending ${mediaType} This Week` },
   ];
 });

@@ -41,7 +41,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
   // @ts-expect-error
   const { searchResults } = data;
   return [
-    { title: `Sora - Search results for ${params.movieKeyword}` },
+    { title: `AnimeNexus - Search results for ${params.movieKeyword}` },
     {
       name: 'keywords',
       content: `Watch ${params.movieKeyword}, Stream ${params.movieKeyword}, Watch ${params.movieKeyword} HD, Online ${params.movieKeyword}, Streaming ${params.movieKeyword}, English, Subtitle ${params.movieKeyword}, English Subtitle`,
@@ -50,7 +50,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
       property: 'og:url',
       content: `https://anime-nexus-six.vercel.app/search/movie/${params.movieKeyword}`,
     },
-    { property: 'og:title', content: `Sora - Search results for ${params.movieKeyword}` },
+    { property: 'og:title', content: `AnimeNexus - Search results for ${params.movieKeyword}` },
     {
       property: 'og:image',
       content: searchResults?.items[0]?.backdropPath || searchResults?.items[0]?.posterPath || '',
@@ -59,7 +59,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
       name: 'twitter:image',
       content: searchResults?.items[0]?.backdropPath || searchResults?.items[0]?.posterPath || '',
     },
-    { name: 'twitter:title', content: `Sora - Search results for ${params.movieKeyword}` },
+    { name: 'twitter:title', content: `AnimeNexus - Search results for ${params.movieKeyword}` },
   ];
 });
 

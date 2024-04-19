@@ -53,39 +53,39 @@ export async function loader({ request }: LoaderFunctionArgs) {
     let cover;
     switch (imageType) {
       case 'home':
-        title = 'SORA';
+        title = 'NEXUS';
         cover =
-          'https://raw.githubusercontent.com/Khanhtran47/Sora/master/app/assets/images/background-default.jpg';
+          'https://raw.githubusercontent.com/Khanhtran47/AnimeNexus/master/app/assets/images/background-default.jpg';
         break;
       case 'movies':
-        title = 'SORA Movies';
+        title = 'NEXUS Movies';
         cover =
           'https://image.tmdb.org/t/p/w1280_filter(duotone,190235,ad47dd)/lXhgCODAbBXL5buk9yEmTpOoOgR.jpg';
         break;
       case 'tvshows':
-        title = 'SORA TV Shows';
+        title = 'NEXUS TV Shows';
         cover =
           'https://image.tmdb.org/t/p/w1280_filter(duotone,00192f,00baff)/etj8E2o0Bud0HkONVQPjyCkIvpv.jpg';
         break;
       case 'people':
-        title = 'SORA People';
+        title = 'NEXUS People';
         cover =
           'https://image.tmdb.org/t/p/w1280_filter(duotone,190235,ad47dd)/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg';
         break;
       case 'anime':
-        title = 'SORA Anime';
+        title = 'NEXUS Anime';
         cover =
           'https://image.tmdb.org/t/p/w1280_filter(duotone,00192f,00baff)/rqbCbjB19amtOtFQbb3K2lgm2zv.jpg';
         break;
       case 'search':
-        title = 'SORA Search';
+        title = 'NEXUS Search';
         cover =
           'https://image.tmdb.org/t/p/w1280_filter(duotone,00192f,00baff)/Vq4L8A88fNQxBqM27xHtDi4DrL.jpg';
         break;
       default:
-        title = 'SORA';
+        title = 'NEXUS';
         cover =
-          'https://raw.githubusercontent.com/Khanhtran47/Sora/master/app/assets/images/background-default.jpg';
+          'https://raw.githubusercontent.com/Khanhtran47/AnimeNexus/master/app/assets/images/background-default.jpg';
         break;
     }
 

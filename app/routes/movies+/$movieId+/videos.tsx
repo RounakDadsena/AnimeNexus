@@ -48,13 +48,13 @@ export const meta = mergeMeta<typeof loader, { 'routes/movies+/$movieId': typeof
     const { title } = detail || {};
     const movieTitle = title || '';
     return [
-      { title: `Sora - ${movieTitle} - Videos` },
+      { title: `AnimeNexus - ${movieTitle} - Videos` },
       {
         property: 'og:url',
         content: `https://anime-nexus-six.vercel.app/movies/${params.movieId}/videos`,
       },
-      { property: 'og:title', content: `Sora - ${movieTitle} - Videos` },
-      { name: 'twitter:title', content: `Sora - ${movieTitle} - Videos` },
+      { property: 'og:title', content: `AnimeNexus - ${movieTitle} - Videos` },
+      { name: 'twitter:title', content: `AnimeNexus - ${movieTitle} - Videos` },
     ];
   },
 );

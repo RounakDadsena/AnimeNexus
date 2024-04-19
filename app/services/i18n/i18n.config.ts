@@ -1,7 +1,8 @@
-export const DEFAULT_LANGUAGE = 'en';
+export const DEFAULT_LANGUAGE = 'es';
 
 export const languages = [
   { code: 'en', name: 'English' },
+  { code: 'es', name: 'Español' },
   { code: 'fr', name: 'Français' },
   { code: 'vi', name: 'Tiếng Việt' },
 ] as const;

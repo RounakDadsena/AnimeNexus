@@ -36,13 +36,13 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 };
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Search People' },
-  { name: 'description', content: 'Search People on Sora' },
+  { title: 'AnimeNexus - Search People' },
+  { name: 'description', content: 'Search People on AnimeNexus' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/search/people/' },
-  { property: 'og:title', content: 'Sora - Search People' },
-  { property: 'og:description', content: 'Search People on Sora' },
-  { name: 'twitter:title', content: 'Sora - Search People' },
-  { name: 'twitter:description', content: 'Search People on Sora' },
+  { property: 'og:title', content: 'AnimeNexus - Search People' },
+  { property: 'og:description', content: 'Search People on AnimeNexus' },
+  { name: 'twitter:title', content: 'AnimeNexus - Search People' },
+  { name: 'twitter:description', content: 'Search People on AnimeNexus' },
 ]);
 
 export const handle: Handle = {

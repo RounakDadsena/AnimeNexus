@@ -40,7 +40,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
   // @ts-expect-error
   const { searchResults } = data;
   return [
-    { title: `Sora - Search results for ${params.peopleKeyword}` },
+    { title: `AnimeNexus - Search results for ${params.peopleKeyword}` },
     {
       name: 'keywords',
       content: `${params.peopleKeyword}`,
@@ -49,7 +49,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
       property: 'og:url',
       content: `https://anime-nexus-six.vercel.app/search/people/${params.peopleKeyword}`,
     },
-    { property: 'og:title', content: `Sora - Search results for ${params.peopleKeyword}` },
+    { property: 'og:title', content: `AnimeNexus - Search results for ${params.peopleKeyword}` },
     {
       property: 'og:image',
       content: searchResults?.items[0]?.posterPath || '',
@@ -58,7 +58,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
       name: 'twitter:image',
       content: searchResults?.items[0]?.posterPath || '',
     },
-    { name: 'twitter:title', content: `Sora - Search results for ${params.peopleKeyword}` },
+    { name: 'twitter:title', content: `AnimeNexus - Search results for ${params.peopleKeyword}` },
   ];
 });
 

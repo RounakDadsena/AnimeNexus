@@ -1,18 +1,24 @@
+/* eslint-disable no-case-declarations */
+/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
+/* eslint-disable no-param-reassign */
 import { load } from 'cheerio';
 
-import {
-  AnimeParser,
+import type {
   ISearch,
   IAnimeInfo,
-  MediaStatus,
   IAnimeResult,
   ISource,
   IAnimeEpisode,
-  SubOrSub,
   IEpisodeServer,
-  MediaFormat,
 } from '../../models';
-import { substringAfter, substringBefore, compareTwoStrings, kitsuSearchQuery, range } from '../../utils';
+import { AnimeParser, MediaStatus, SubOrSub, MediaFormat } from '../../models';
+import {
+  substringAfter,
+  substringBefore,
+  compareTwoStrings,
+  kitsuSearchQuery,
+  range,
+} from '../../utils';
 import Gogoanime from '../anime/gogoanime';
 import Zoro from '../anime/zoro';
 import Crunchyroll from '../anime/crunchyroll';
@@ -51,7 +57,7 @@ class Myanimelist extends AnimeParser {
   private async populateEpisodeList(
     episodes: IAnimeEpisode[],
     url: string,
-    count: number = 1
+    count: number = 1,
   ): Promise<void> {
     try {
       const { data } = await this.client.request({
@@ -171,7 +177,7 @@ class Myanimelist extends AnimeParser {
   fetchAnimeInfo = async (
     animeId: string,
     dub: boolean = false,
-    fetchFiller: boolean = false
+    fetchFiller: boolean = false,
   ): Promise<IAnimeInfo> => {
     try {
       const animeInfo = await this.fetchMalInfoById(animeId);
@@ -187,13 +193,15 @@ class Myanimelist extends AnimeParser {
         (this.provider instanceof Zoro || this.provider instanceof Gogoanime) &&
         !dub &&
         (animeInfo.status === MediaStatus.ONGOING ||
-          range({ from: 2000, to: new Date().getFullYear() + 1 }).includes(animeInfo.startDate?.year!))
+          range({ from: 2000, to: new Date().getFullYear() + 1 }).includes(
+            animeInfo.startDate?.year!,
+          ))
       ) {
         try {
           animeInfo.episodes = (
             await new Anify().fetchAnimeInfo(
               animeId,
-              this.provider.name.toLowerCase() as 'gogoanime' | 'zoro'
+              this.provider.name.toLowerCase() as 'gogoanime' | 'zoro',
             )
           ).episodes?.map((item: any) => ({
             id: item.slug,
@@ -212,7 +220,7 @@ class Myanimelist extends AnimeParser {
             animeInfo.season!,
             animeInfo.startDate?.year!,
             animeId,
-            dub
+            dub,
           );
 
           animeInfo.episodes = animeInfo.episodes?.map((episode: IAnimeEpisode) => {
@@ -232,7 +240,7 @@ class Myanimelist extends AnimeParser {
           animeInfo.season!,
           animeInfo.startDate?.year!,
           animeId,
-          dub
+          dub,
         );
 
       if (fetchFiller) {
@@ -248,7 +256,7 @@ class Myanimelist extends AnimeParser {
             ...(fillerData.episodes as {
               number: string;
               'filler-bool': boolean;
-            }[])
+            }[]),
           );
         }
       }
@@ -262,7 +270,9 @@ class Myanimelist extends AnimeParser {
           fillerEpisodes?.length >= animeInfo.episodes!.length
         ) {
           if (fillerEpisodes[episode.number! - 1])
-            episode.isFiller = new Boolean(fillerEpisodes[episode.number! - 1]['filler-bool']).valueOf();
+            episode.isFiller = new Boolean(
+              fillerEpisodes[episode.number! - 1]['filler-bool'],
+            ).valueOf();
         }
 
         return episode;
@@ -327,7 +337,10 @@ class Myanimelist extends AnimeParser {
     });
 
     if (this.provider instanceof Crunchyroll) {
-      return await this.provider.fetchAnimeInfo(findAnime.results[0].id, findAnime.results[0].type as string);
+      return await this.provider.fetchAnimeInfo(
+        findAnime.results[0].id,
+        findAnime.results[0].type as string,
+      );
     }
     // TODO: use much better way than this
     return (await this.provider.fetchAnimeInfo(findAnime.results[0].id)) as IAnimeInfo;
@@ -339,9 +352,10 @@ class Myanimelist extends AnimeParser {
     startDate: number,
     malId: string,
     dub: boolean,
-    externalLinks?: any
+    externalLinks?: any,
   ): Promise<IAnimeEpisode[]> => {
-    if (this.provider instanceof Anify) return (await this.provider.fetchAnimeInfo(malId)).episodes!;
+    if (this.provider instanceof Anify)
+      return (await this.provider.fetchAnimeInfo(malId)).episodes!;
 
     // console.log({ title });
     const slug = title?.replace(/[^0-9a-zA-Z]+/g, ' ');
@@ -386,14 +400,18 @@ class Myanimelist extends AnimeParser {
         const possibleSource = sites.find(s => {
           if (s.page.toLowerCase() === this.provider.name.toLowerCase())
             if (this.provider instanceof Gogoanime)
-              return dub ? s.title.toLowerCase().includes('dub') : !s.title.toLowerCase().includes('dub');
+              return dub
+                ? s.title.toLowerCase().includes('dub')
+                : !s.title.toLowerCase().includes('dub');
             else return true;
           return false;
         });
 
         if (possibleSource) {
           try {
-            possibleAnime = await this.provider.fetchAnimeInfo(possibleSource.url.split('/').pop()!);
+            possibleAnime = await this.provider.fetchAnimeInfo(
+              possibleSource.url.split('/').pop()!,
+            );
           } catch (err) {
             console.error(err);
             possibleAnime = await this.findAnimeRaw(slug);
@@ -416,7 +434,7 @@ class Myanimelist extends AnimeParser {
         if (possibleAnime.subOrDub === SubOrSub.BOTH) {
           possibleAnime.episodes[index].id = possibleAnime.episodes[index].id.replace(
             `$both`,
-            dub ? '$dub' : '$sub'
+            dub ? '$dub' : '$sub',
           );
         }
       });
@@ -455,7 +473,12 @@ class Myanimelist extends AnimeParser {
       query: kitsuSearchQuery(slug),
     };
 
-    const newEpisodeList = await this.findKitsuAnime(possibleProviderEpisodes, options, season, startDate);
+    const newEpisodeList = await this.findKitsuAnime(
+      possibleProviderEpisodes,
+      options,
+      season,
+      startDate,
+    );
 
     return newEpisodeList;
   };
@@ -464,7 +487,7 @@ class Myanimelist extends AnimeParser {
     possibleProviderEpisodes: IAnimeEpisode[],
     options: {},
     season?: string,
-    startDate?: number
+    startDate?: number,
   ) => {
     const kitsuEpisodes = await this.client.post(this.kitsuGraphqlUrl, options);
     const episodesList = new Map();
@@ -473,7 +496,10 @@ class Myanimelist extends AnimeParser {
 
       if (nodes) {
         nodes.forEach((node: any) => {
-          if (node.season === season && node.startDate.trim().split('-')[0] === startDate?.toString()) {
+          if (
+            node.season === season &&
+            node.startDate.trim().split('-')[0] === startDate?.toString()
+          ) {
             const episodes = node.episodes.nodes;
 
             for (const episode of episodes) {
@@ -483,12 +509,16 @@ class Myanimelist extends AnimeParser {
               let thumbnail = undefined;
 
               if (episode?.description?.en)
-                description = episode?.description.en.toString().replace(/"/g, '').replace('\\n', '\n');
+                description = episode?.description.en
+                  .toString()
+                  .replace(/"/g, '')
+                  .replace('\\n', '\n');
               if (episode?.thumbnail)
                 thumbnail = episode?.thumbnail.original.url.toString().replace(/"/g, '');
 
               if (episode) {
-                if (episode.titles?.canonical) name = episode.titles.canonical.toString().replace(/"/g, '');
+                if (episode.titles?.canonical)
+                  name = episode.titles.canonical.toString().replace(/"/g, '');
                 episodesList.set(i, {
                   episodeNum: episode?.number.toString().replace(/"/g, ''),
                   title: name,
@@ -551,7 +581,8 @@ class Myanimelist extends AnimeParser {
     const episodes: IAnimeEpisode[] = [];
     const desc = $('[itemprop="description"]').first().text();
     const imageElem = $('[itemprop="image"]').first();
-    const image = imageElem.attr('src') || imageElem.attr('data-image') || imageElem.attr('data-src');
+    const image =
+      imageElem.attr('src') || imageElem.attr('data-image') || imageElem.attr('data-src');
     const genres: string[] = [];
     const genreDOM = $('[itemprop="genre"]').get();
 
@@ -561,10 +592,20 @@ class Myanimelist extends AnimeParser {
     animeInfo.image = image;
     animeInfo.description = desc;
     animeInfo.title = {
-      english: $('.js-alternative-titles.hide').children().eq(0).text().replace('English: ', '').trim(),
+      english: $('.js-alternative-titles.hide')
+        .children()
+        .eq(0)
+        .text()
+        .replace('English: ', '')
+        .trim(),
       romaji: $('.title-name').text(),
       native: $('.js-alternative-titles.hide').parent().children().eq(9).text().trim(),
-      userPreferred: $('.js-alternative-titles.hide').children().eq(0).text().replace('English: ', '').trim(),
+      userPreferred: $('.js-alternative-titles.hide')
+        .children()
+        .eq(0)
+        .text()
+        .replace('English: ', '')
+        .trim(),
     };
 
     animeInfo.synonyms = $('.js-alternative-titles.hide')
@@ -577,7 +618,7 @@ class Myanimelist extends AnimeParser {
       .split(',');
     animeInfo.studios = [];
     animeInfo.popularity = parseInt(
-      $('.numbers.popularity').text().trim().replace('Popularity #', '').trim()
+      $('.numbers.popularity').text().trim().replace('Popularity #', '').trim(),
     );
 
     const producers: string[] = [];

@@ -47,7 +47,7 @@ const generateSvg = async ({ title, cover }: { title: string; cover: string }) =
         }}
       />
       <img
-        src="https://raw.githubusercontent.com/Khanhtran47/Sora/master/app/assets/images/logo_loading.png"
+        src="https://raw.githubusercontent.com/Khanhtran47/AnimeNexus/master/app/assets/images/logo_loading.png"
         height={150}
         width={150}
         alt="logo"
@@ -178,7 +178,7 @@ const generateMovieSvg = async ({
             marginBottom: 0,
           }}
         >
-          SORA
+          NEXUS
         </h3>
         <h4
           style={{

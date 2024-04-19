@@ -59,7 +59,7 @@ const MobileHeader = () => {
           arial-label="home-page"
           className="bg-gradient-to-tr from-secondary to-primary to-50% bg-clip-text text-3xl font-bold tracking-normal text-transparent md:text-4xl"
         >
-          SORA
+          NEXUS
         </NavLink>
         <Button
           variant="light"

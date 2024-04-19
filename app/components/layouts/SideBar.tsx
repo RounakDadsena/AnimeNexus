@@ -193,7 +193,7 @@ const SideBar = () => {
               arial-label="home-page"
               className="bg-gradient-to-tr from-secondary to-primary to-50% bg-clip-text text-3xl font-bold tracking-normal text-transparent focus:outline-none focus:ring-2 focus:ring-focus md:text-4xl"
             >
-              SORA
+              NEXUS
             </NavLink>
           </div>
         )}
@@ -1065,7 +1065,7 @@ const SideBar = () => {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-            <NavigationMenuItem
+            {/*   <NavigationMenuItem
               className={`${navigationItemWidthStyle} text-left transition-[width] duration-200`}
               value="people"
             >
@@ -1111,7 +1111,7 @@ const SideBar = () => {
                   </NavLink>
                 </NavigationMenuLink>
               </Tooltip>
-            </NavigationMenuItem>
+                  </NavigationMenuItem>*/}
             <NavigationMenuItem
               className={`${navigationItemWidthStyle} text-left transition-[width] duration-200`}
               value="featured-lists"

@@ -1,4 +1,5 @@
-import { NewsParser, INewsFeed, Topics, INewsInfo } from '../../models';
+import type { INewsFeed, INewsInfo } from '../../models';
+import { NewsParser, Topics } from '../../models';
 declare class NewsFeed implements INewsFeed {
     title: string;
     id: string;
@@ -6,8 +7,9 @@ declare class NewsFeed implements INewsFeed {
     topics: Topics[];
     preview: INewsFeed['preview'];
     thumbnail: string;
+    thumbnailHash: string;
     url: string;
-    constructor(title: string, id: string, uploadedAt: string, topics: Topics[], preview: INewsFeed['preview'], thumbnail: string, url: string);
+    constructor(title: string, id: string, uploadedAt: string, topics: Topics[], preview: INewsFeed['preview'], thumbnail: string, thumbnailHash: string, url: string);
     getInfo(): Promise<INewsInfo>;
 }
 declare class AnimeNewsNetwork extends NewsParser {

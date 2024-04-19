@@ -146,7 +146,7 @@ const RootIndex = () => {
           onClickViewMore={() => navigate('/lists')}
           showMoreList
         />
-        <MediaList
+        {/*<MediaList
           items={people}
           itemsType="people"
           key="slider-card-popular-people"
@@ -155,7 +155,7 @@ const RootIndex = () => {
           navigationButtons
           onClickViewMore={() => onClickViewMore('people')}
           showMoreList
-        />
+  />*/}
       </div>
     </motion.div>
   );

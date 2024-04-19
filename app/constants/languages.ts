@@ -1,3 +1,3 @@
-const languages: string[] = ['en', 'fr', 'vi'];
+const languages: string[] = ['es', 'en', 'fr', 'vi'];
 
 export default languages;

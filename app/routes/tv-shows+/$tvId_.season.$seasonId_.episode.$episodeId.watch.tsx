@@ -48,7 +48,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
   const { detail, seasonDetail } = data || {};
   return [
     {
-      title: `Sora - Watch ${detail?.name || ''} season ${params.seasonId || ''} episode ${
+      title: `AnimeNexus - Watch ${detail?.name || ''} season ${params.seasonId || ''} episode ${
         params.episodeId || ''
       }`,
     },
@@ -75,14 +75,14 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
     },
     {
       property: 'og:title',
-      content: `Sora - Watch ${detail?.name || ''} season ${params.seasonId || ''} episode ${
+      content: `AnimeNexus - Watch ${detail?.name || ''} season ${params.seasonId || ''} episode ${
         params.episodeId || ''
       }`,
     },
     { property: 'og:description', content: seasonDetail?.overview || detail?.overview || '' },
     {
       name: 'twitter:title',
-      content: `Sora - Watch ${detail?.name || ''} season ${params.seasonId || ''} episode ${
+      content: `AnimeNexus - Watch ${detail?.name || ''} season ${params.seasonId || ''} episode ${
         params.episodeId || ''
       }`,
     },

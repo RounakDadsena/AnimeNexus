@@ -5,13 +5,13 @@ import type { Handle } from '~/types/handle';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Trending' },
+  { title: 'AnimeNexus - Trending' },
   { name: 'keywords', content: 'trending, trending movies, trending tv shows, trending anime' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/trending/' },
-  { property: 'og:title', content: 'Sora - Trending' },
+  { property: 'og:title', content: 'AnimeNexus - Trending' },
   { name: 'description', content: 'Trending' },
   { property: 'og:description', content: 'Trending' },
-  { name: 'twitter:title', content: 'Sora - Trending' },
+  { name: 'twitter:title', content: 'AnimeNexus - Trending' },
   { name: 'twitter:description', content: 'Trending' },
 ]);
 

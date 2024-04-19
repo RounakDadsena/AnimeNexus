@@ -16,12 +16,12 @@ import MediaList from '~/components/media/MediaList';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Popular Movies' },
+  { title: 'AnimeNexus - Popular Movies' },
   { name: 'description', content: 'Popular Movies' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/movies/popular' },
-  { property: 'og:title', content: 'Sora - Popular Movies' },
+  { property: 'og:title', content: 'AnimeNexus - Popular Movies' },
   { property: 'og:description', content: 'Popular Movies' },
-  { name: 'twitter:title', content: 'Sora - Popular Movies' },
+  { name: 'twitter:title', content: 'AnimeNexus - Popular Movies' },
   { name: 'twitter:description', content: 'Popular Movies' },
 ]);
 

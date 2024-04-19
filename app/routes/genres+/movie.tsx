@@ -12,13 +12,13 @@ import { useTypedRouteLoaderData } from '~/utils/react/hooks/useTypedRouteLoader
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora Movies - Genres' },
+  { title: 'AnimeNexus Movies - Genres' },
   { name: 'description', content: 'Movies Genres' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/genres/movies' },
-  { property: 'og:title', content: 'Sora Movies - Genres' },
+  { property: 'og:title', content: 'AnimeNexus Movies - Genres' },
   { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=movies' },
   { property: 'og:description', content: 'Movies Genres' },
-  { name: 'twitter:title', content: 'Sora Movies - Genres' },
+  { name: 'twitter:title', content: 'AnimeNexus Movies - Genres' },
   { name: 'twitter:description', content: 'Movies Genres' },
   { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=movies' },
 ]);

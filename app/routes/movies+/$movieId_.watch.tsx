@@ -41,7 +41,7 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
   const { title, overview } = detail || {};
   const movieTitle = title || '';
   return [
-    { title: `Sora - Watch ${movieTitle}` },
+    { title: `AnimeNexus - Watch ${movieTitle}` },
     { name: 'description', content: overview },
     {
       name: 'keywords',
@@ -51,13 +51,13 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
       property: 'og:url',
       content: `https://anime-nexus-six.vercel.app/movies/${params.movieId}/watch`,
     },
-    { property: 'og:title', content: `Sora - Watch ${movieTitle}` },
+    { property: 'og:title', content: `AnimeNexus - Watch ${movieTitle}` },
     { property: 'og:description', content: overview },
     {
       property: 'og:image',
       content: `https://anime-nexus-six.vercel.app/api/ogimage?m=${params.movieId}&mt=movie`,
     },
-    { name: 'twitter:title', content: `Sora - Watch ${movieTitle}` },
+    { name: 'twitter:title', content: `AnimeNexus - Watch ${movieTitle}` },
     { name: 'twitter:description', content: overview },
     {
       name: 'twitter:image',

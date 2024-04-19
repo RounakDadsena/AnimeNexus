@@ -711,12 +711,12 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
   const { title, description } = detail || {};
   const animeTitle = title?.userPreferred || title?.english || title?.romaji || title?.native || '';
   return [
-    { title: `Sora - Watch ${animeTitle} episode ${episodeInfo?.number || ''}` },
+    { title: `AnimeNexus - Watch ${animeTitle} episode ${episodeInfo?.number || ''}` },
     {
       name: 'description',
       content: description
         ? description?.replace(/<\/?[^>]+(>|$)/g, '')
-        : `Watch ${animeTitle} in Sora`,
+        : `Watch ${animeTitle} in AnimeNexus`,
     },
     {
       property: 'og:url',
@@ -725,13 +725,13 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
     {
       property: 'og:title',
 
-      content: `Sora - Watch ${animeTitle} episode ${episodeInfo?.number || ''}`,
+      content: `AnimeNexus - Watch ${animeTitle} episode ${episodeInfo?.number || ''}`,
     },
     {
       property: 'og:description',
       content: description
         ? description?.replace(/<\/?[^>]+(>|$)/g, '')
-        : `Watch ${animeTitle} in Sora`,
+        : `Watch ${animeTitle} in AnimeNexus`,
     },
     { property: 'og:image', content: `https://img.anili.st/media/${params.animeId}` },
     {
@@ -742,13 +742,13 @@ export const meta = mergeMeta<typeof loader>(({ data, params }) => {
     {
       name: 'twitter:title',
 
-      content: `Sora - Watch ${animeTitle} episode ${episodeInfo?.number || ''}`,
+      content: `AnimeNexus - Watch ${animeTitle} episode ${episodeInfo?.number || ''}`,
     },
     {
       name: 'twitter:description',
       content: description
         ? description?.replace(/<\/?[^>]+(>|$)/g, '')
-        : `Watch ${animeTitle} in Sora`,
+        : `Watch ${animeTitle} in AnimeNexus`,
     },
   ];
 });

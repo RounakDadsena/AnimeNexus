@@ -6,13 +6,13 @@ import { discoverPages } from '~/constants/tabLinks';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Discover' },
+  { title: 'AnimeNexus - Discover' },
   { name: 'description', content: 'Discover Movies, TV Shows, Anime, People and More' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/discover' },
-  { property: 'og:title', content: 'Sora - Discover' },
+  { property: 'og:title', content: 'AnimeNexus - Discover' },
   { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=discover' },
   { property: 'og:description', content: 'Discover Movies, TV Shows, Anime, People and More' },
-  { name: 'twitter:title', content: 'Sora - Discover' },
+  { name: 'twitter:title', content: 'AnimeNexus - Discover' },
   { name: 'twitter:description', content: 'Discover Movies, TV Shows, Anime, People and More' },
   { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=discover' },
 ]);

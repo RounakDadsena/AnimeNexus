@@ -224,11 +224,10 @@ class FlixHQ extends MovieParser {
       }
 
       const { data } = await this.client.get(
-        `${this.baseUrl}/ajax/get_link/${servers[i].url.split('.').slice(-1).shift()}`,
+        `${this.baseUrl}/ajax/get_link/${servers[i].url.split('---****').slice(-1).shift()}`,
       );
 
       const serverUrl: URL = new URL(data.link);
-
       return await this.fetchEpisodeSources(serverUrl.href, mediaId, server);
     } catch (err) {
       throw new Error((err as Error).message);
@@ -244,9 +243,18 @@ class FlixHQ extends MovieParser {
     episodeId: string,
     mediaId: string,
   ): Promise<IEpisodeServer[]> => {
+    console.log(mediaId);
+    const regex = /-(\d+)$/; // Match the last numbers after the last "-"
+    const match = mediaId.match(regex);
+    if (match) {
+      mediaId = match[1]; // Return the matched numbers
+    } else {
+      mediaId = ''; // Return null if no match found
+    }
+    console.log(mediaId);
     if (!episodeId.startsWith(this.baseUrl + '/ajax') && !mediaId.includes('movie'))
-      episodeId = `${this.baseUrl}/ajax/v2/episode/servers/${episodeId}`;
-    else episodeId = `${this.baseUrl}/ajax/movie/episodes/${episodeId}`;
+      episodeId = `${this.baseUrl}/ajax/episode/list/${mediaId}`;
+    else episodeId = `${this.baseUrl}/ajax/movie/episodes/list/${episodeId}`;
 
     try {
       const { data } = await this.client.get(episodeId);
@@ -256,11 +264,11 @@ class FlixHQ extends MovieParser {
         .map((i, el) => {
           const server = {
             name: mediaId.includes('movie')
-              ? $(el).find('a').attr('title')!.toLowerCase()
-              : $(el).find('a').attr('title')!.slice(6).trim().toLowerCase(),
-            url: `${this.baseUrl}/${mediaId}.${
+              ? $(el).find('span').text()!.toLowerCase()
+              : $(el).find('a').attr('title')!.toLowerCase(),
+            url: `${this.baseUrl}${
               !mediaId.includes('movie')
-                ? $(el).find('a').attr('data-id')
+                ? $(el).find('a').attr('href')
                 : $(el).find('a').attr('data-linkid')
             }`.replace(
               !mediaId.includes('movie') ? /\/tv\// : /\/movie\//,
@@ -480,14 +488,5 @@ class FlixHQ extends MovieParser {
     }
   };
 }
-
-// (async () => {
-//    const movie = new FlixHQ();
-//   const search = await movie.search('the flash');
-//   // const movieInfo = await movie.fetchEpisodeSources('1168337', 'tv/watch-vincenzo-67955');
-//   // const recentTv = await movie.fetchTrendingTvShows();
-//   //  const genre = await movie.fetchByCountry('KR')
-//   //  console.log(genre)
-// })();
 
 export default FlixHQ;

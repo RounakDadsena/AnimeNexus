@@ -1,25 +1,27 @@
-import {
+/* eslint-disable no-param-reassign */
+import type {
   ISearch,
   IAnimeInfo,
   IAnimeResult,
   ISource,
   IEpisodeServer,
-  MovieParser,
-  TvType,
   IMovieResult,
   IMovieInfo,
   ProxyConfig,
   IMovieEpisode,
 } from '../../models';
+import { MovieParser, TvType } from '../../models';
+import type { IPeopleResult } from '../../models/types';
 import { compareTwoStrings } from '../../utils';
 import FlixHQ from '../movies/flixhq';
-import { AxiosAdapter } from 'axios';
+import type { AxiosAdapter } from 'axios';
 
 class TMDB extends MovieParser {
   override readonly name = 'TMDB';
   protected override baseUrl = 'https://www.themoviedb.org';
   protected apiUrl = 'https://api.themoviedb.org/3';
-  protected override logo = 'https://pbs.twimg.com/profile_images/1243623122089041920/gVZIvphd_400x400.jpg';
+  protected override logo =
+    'https://pbs.twimg.com/profile_images/1243623122089041920/gVZIvphd_400x400.jpg';
   protected override classPath = 'META.TMDB';
   override supportedTypes = new Set([TvType.MOVIE, TvType.TVSERIES, TvType.ANIME]);
 
@@ -29,11 +31,95 @@ class TMDB extends MovieParser {
     private apiKey: string = '5201b54eb0968700e693a30576d7d4dc',
     provider?: MovieParser,
     proxyConfig?: ProxyConfig,
-    adapter?: AxiosAdapter
+    adapter?: AxiosAdapter,
   ) {
     super(proxyConfig, adapter);
     this.provider = provider || new FlixHQ();
   }
+
+  /**
+   * @param type trending type: tv series, movie, people or all
+   * @param timePeriod trending time period day or week
+   * @param page page number
+   */
+  fetchTrending = async (
+    type: string | 'all',
+    timePeriod: 'day' | 'week' = 'day',
+    page: number = 1,
+  ): Promise<ISearch<IMovieResult | IAnimeResult | IPeopleResult>> => {
+    const trendingUrl = `${this.apiUrl}/trending/${
+      type.toLowerCase() === TvType.MOVIE.toLowerCase()
+        ? 'movie'
+        : type.toLowerCase() === TvType.TVSERIES.toLowerCase()
+        ? 'tv'
+        : type.toLowerCase() === TvType.PEOPLE.toLowerCase()
+        ? 'person'
+        : 'all'
+    }/${timePeriod}?page=${page}&api_key=${this.apiKey}&language=en-US`;
+
+    const result: ISearch<IMovieResult | IAnimeResult | IPeopleResult> = {
+      currentPage: page,
+      hasNextPage: false,
+      results: [],
+    };
+
+    try {
+      const { data } = await this.client.get(trendingUrl);
+
+      if (data.results.length < 1) return result;
+
+      result.hasNextPage = page + 1 <= data.total_pages;
+      result.currentPage = page;
+      result.totalResults = data.total_results;
+      result.totalPages = data.total_pages;
+
+      result.results = data.results.map((result: any) => {
+        if (result.media_type !== 'person') {
+          const date = new Date(result?.release_date || result?.first_air_date);
+
+          const movie: IMovieResult = {
+            id: result.id,
+            title: result?.title || result?.name,
+            image: `https://image.tmdb.org/t/p/original${result?.poster_path}`,
+            type: result.media_type === 'movie' ? TvType.MOVIE : TvType.TVSERIES,
+            rating: result?.vote_average || 0,
+            releaseDate: `${date.getFullYear()}` || '0',
+          };
+
+          return movie;
+        } else {
+          const user: IPeopleResult = {
+            id: result.id,
+            name: result.name,
+            rating: result.popularity,
+            image: `https://image.tmdb.org/t/p/original${result?.profile_path}`,
+            movies: [],
+          };
+
+          user.movies = result['known_for'].map((movie: any) => {
+            const date = new Date(movie?.release_date || movie?.first_air_date);
+
+            const xmovie: IMovieResult = {
+              id: movie.id,
+              title: movie?.title || movie?.name,
+              image: `https://image.tmdb.org/t/p/original${movie?.poster_path}`,
+              type: movie.media_type === 'movie' ? TvType.MOVIE : TvType.TVSERIES,
+              rating: movie?.vote_average || 0,
+              releaseDate: `${date.getFullYear()}` || '0',
+            };
+
+            return xmovie;
+          });
+
+          return user;
+        }
+      });
+
+      return result;
+    } catch (err) {
+      throw new Error((err as Error).message);
+    }
+  };
 
   /**
    * @param query search query
@@ -41,7 +127,7 @@ class TMDB extends MovieParser {
    */
   override search = async (
     query: string,
-    page: number = 1
+    page: number = 1,
   ): Promise<ISearch<IMovieResult | IAnimeResult>> => {
     const searchUrl = `${this.apiUrl}/search/multi?api_key=${this.apiKey}&language=en-US&page=${page}&include_adult=false&query=${query}`;
 
@@ -86,7 +172,10 @@ class TMDB extends MovieParser {
    * @param id media id (anime or movie/tv)
    * @param type movie or tv
    */
-  override fetchMediaInfo = async (mediaId: string, type: string): Promise<IMovieInfo | IAnimeInfo> => {
+  override fetchMediaInfo = async (
+    mediaId: string,
+    type: string,
+  ): Promise<IMovieInfo | IAnimeInfo> => {
     type = type.toLowerCase() === 'movie' ? 'movie' : 'tv';
     const infoUrl = `${this.apiUrl}/${type}/${mediaId}?api_key=${this.apiKey}&language=en-US&append_to_response=release_dates,watch/providers,alternative_titles,credits,external_ids,images,keywords,recommendations,reviews,similar,translations,videos&include_image_language=en`;
 
@@ -130,7 +219,7 @@ class TMDB extends MovieParser {
           url: `https://image.tmdb.org/t/p/original${logo.file_path}`,
           aspectRatio: logo?.aspect_ratio,
           width: logo?.width,
-        })
+        }),
       );
 
       info.type = type === 'movie' ? TvType.MOVIE : TvType.TVSERIES;
@@ -221,7 +310,7 @@ class TMDB extends MovieParser {
               : seasonData?.episodes.map((episode: any): IMovieEpisode => {
                   //find episode in each season (seasonEpisodes)
                   const episodeFromProvider = seasonEpisodes?.find(
-                    ep => ep.number === episode.episode_number
+                    ep => ep.number === episode.episode_number,
                   );
 
                   return {
@@ -275,7 +364,7 @@ class TMDB extends MovieParser {
       totalSeasons?: number;
       totalEpisodes?: number;
       [key: string]: any;
-    }
+    },
   ): Promise<string | undefined> => {
     //clean title
     title = title.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase();
@@ -309,7 +398,8 @@ class TMDB extends MovieParser {
     //remove results that dont match the type
     findMedia.results = findMedia.results.filter(result => {
       if (extraData.type === TvType.MOVIE) return (result.type as string) === TvType.MOVIE;
-      else if (extraData.type === TvType.TVSERIES) return (result.type as string) === TvType.TVSERIES;
+      else if (extraData.type === TvType.TVSERIES)
+        return (result.type as string) === TvType.TVSERIES;
       else return result;
     });
 
@@ -352,7 +442,10 @@ class TMDB extends MovieParser {
    * @param episodeId episode id
    * @param args optional arguments
    **/
-  override fetchEpisodeServers = async (episodeId: string, ...args: any): Promise<IEpisodeServer[]> => {
+  override fetchEpisodeServers = async (
+    episodeId: string,
+    ...args: any
+  ): Promise<IEpisodeServer[]> => {
     return this.provider.fetchEpisodeServers(episodeId, ...args);
   };
 }

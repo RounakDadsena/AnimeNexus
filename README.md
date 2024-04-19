@@ -7,7 +7,7 @@
     <img src="app/assets/images/logo_loading.png" alt="Logo" width="80" height="80">
   </a>
 
-<h2 align="center">SORA</h2>
+<h2 align="center">NEXUS</h2>
   <p align="center">
     A web app for exploring, watching movies, tv shows and anime built with Remix and NextUI.
     <br />
@@ -81,6 +81,6 @@ pnpm dev
 
 ## License
 
-Distributed under the MIT License. See [LICENSE.txt](https://github.com/Khanhtran47/Sora/blob/master/LICENSE.txt) for more information.
+Distributed under the MIT License. See [LICENSE.txt](https://github.com/Khanhtran47/AnimeNexus/blob/master/LICENSE.txt) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

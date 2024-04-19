@@ -40,7 +40,7 @@ export const meta = mergeMeta(({ data, params }) => {
   // @ts-expect-error
   const { searchResults } = data;
   return [
-    { title: `Sora - Search results for ${params.tvKeyword}` },
+    { title: `AnimeNexus - Search results for ${params.tvKeyword}` },
     {
       name: 'keywords',
       content: `Watch ${params.tvKeyword}, Stream ${params.tvKeyword}, Watch ${params.tvKeyword} HD, Online ${params.tvKeyword}, Streaming ${params.tvKeyword}, English, Subtitle ${params.tvKeyword}, English Subtitle`,
@@ -49,7 +49,7 @@ export const meta = mergeMeta(({ data, params }) => {
       property: 'og:url',
       content: `https://anime-nexus-six.vercel.app/search/tv/${params.tvKeyword}`,
     },
-    { property: 'og:title', content: `Sora - Search results for ${params.tvKeyword}` },
+    { property: 'og:title', content: `AnimeNexus - Search results for ${params.tvKeyword}` },
     {
       property: 'og:image',
       content: searchResults?.items[0]?.backdropPath || searchResults?.items[0]?.posterPath || '',
@@ -58,7 +58,7 @@ export const meta = mergeMeta(({ data, params }) => {
       name: 'twitter:image',
       content: searchResults?.items[0]?.backdropPath || searchResults?.items[0]?.posterPath || '',
     },
-    { name: 'twitter:title', content: `Sora - Search results for ${params.tvKeyword}` },
+    { name: 'twitter:title', content: `AnimeNexus - Search results for ${params.tvKeyword}` },
   ];
 });
 

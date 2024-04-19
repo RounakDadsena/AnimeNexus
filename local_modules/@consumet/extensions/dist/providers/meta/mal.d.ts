@@ -1,4 +1,5 @@
-import { AnimeParser, ISearch, IAnimeInfo, IAnimeResult, ISource, IEpisodeServer } from '../../models';
+import type { ISearch, IAnimeInfo, IAnimeResult, ISource, IEpisodeServer } from '../../models';
+import { AnimeParser } from '../../models';
 declare class Myanimelist extends AnimeParser {
     readonly name = "Myanimelist";
     protected baseUrl: string;

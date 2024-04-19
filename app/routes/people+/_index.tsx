@@ -13,19 +13,19 @@ import MediaList from '~/components/media/MediaList';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Popular People' },
-  { name: 'description', content: 'Discover the most popular celebrities on Sora.' },
+  { title: 'AnimeNexus - Popular People' },
+  { name: 'description', content: 'Discover the most popular celebrities on AnimeNexus.' },
   {
     name: 'keywords',
     content:
       'popular celebrities, popular celebrity, top celebrities, top celebrity, people celebrity, celebrity people, best celebrity, best celebrities, famous celebrity, famous people, celebrity movies, movies by celebrity, celebrity tv shows, tv show celebrities, celebrity television shows, celebrity tv series',
   },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/people' },
-  { property: 'og:title', content: 'Sora - Popular People' },
+  { property: 'og:title', content: 'AnimeNexus - Popular People' },
   { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=people' },
-  { property: 'og:description', content: 'Discover the most popular celebrities on Sora.' },
-  { name: 'twitter:title', content: 'Sora - Popular People' },
-  { name: 'twitter:description', content: 'Discover the most popular celebrities on Sora.' },
+  { property: 'og:description', content: 'Discover the most popular celebrities on AnimeNexus.' },
+  { name: 'twitter:title', content: 'AnimeNexus - Popular People' },
+  { name: 'twitter:description', content: 'Discover the most popular celebrities on AnimeNexus.' },
   { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=people' },
 ]);
 

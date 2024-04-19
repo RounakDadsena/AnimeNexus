@@ -52,13 +52,13 @@ export const meta = mergeMeta<typeof loader, { 'routes/tv-shows+/$tvId': typeof 
     const { detail } = tvData;
     const { name } = detail || {};
     return [
-      { title: `Sora - ${name} - Photos` },
-      { property: 'og:title', content: `Sora - ${name} - Photos` },
+      { title: `AnimeNexus - ${name} - Photos` },
+      { property: 'og:title', content: `AnimeNexus - ${name} - Photos` },
       {
         property: 'og:url',
         content: `https://anime-nexus-six.vercel.app/tv-shows/${params.tvId}/photos`,
       },
-      { property: 'twitter:title', content: `Sora - ${name} - Photos` },
+      { property: 'twitter:title', content: `AnimeNexus - ${name} - Photos` },
     ];
   },
 );

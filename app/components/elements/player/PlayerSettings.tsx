@@ -93,9 +93,7 @@ const PlayerSettings = (props: IPlayerSettingsProps) => {
   const [currentQuality, setCurrentQuality] = useState(
     qualitySelector?.find((quality) => quality.default === true)?.html || 'Auto',
   );
-  const [currentSubtitle, setCurrentSubtitle] = useState(
-    subtitleSelector?.find((subtitle) => subtitle.default === true)?.html || 'English',
-  );
+  const [currentSubtitle, setCurrentSubtitle] = useState('Spanish');
   const [currentSubtitleOffset, setCurrentSubtitleOffset] = useState('Normal');
   const [openDialog, setOpenDialog] = useState(false);
   const [currentDialogName, setCurrentDialogName] = useState('');

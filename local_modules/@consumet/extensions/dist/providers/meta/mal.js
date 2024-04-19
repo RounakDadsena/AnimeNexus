@@ -3,6 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/* eslint-disable no-case-declarations */
+/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
+/* eslint-disable no-param-reassign */
 const cheerio_1 = require("cheerio");
 const models_1 = require("../../models");
 const utils_1 = require("../../utils");
@@ -245,7 +248,9 @@ class Myanimelist extends models_1.AnimeParser {
                     const possibleSource = sites.find(s => {
                         if (s.page.toLowerCase() === this.provider.name.toLowerCase())
                             if (this.provider instanceof gogoanime_1.default)
-                                return dub ? s.title.toLowerCase().includes('dub') : !s.title.toLowerCase().includes('dub');
+                                return dub
+                                    ? s.title.toLowerCase().includes('dub')
+                                    : !s.title.toLowerCase().includes('dub');
                             else
                                 return true;
                         return false;
@@ -317,7 +322,8 @@ class Myanimelist extends models_1.AnimeParser {
                 if (nodes) {
                     nodes.forEach((node) => {
                         var _a, _b;
-                        if (node.season === season && node.startDate.trim().split('-')[0] === (startDate === null || startDate === void 0 ? void 0 : startDate.toString())) {
+                        if (node.season === season &&
+                            node.startDate.trim().split('-')[0] === (startDate === null || startDate === void 0 ? void 0 : startDate.toString())) {
                             const episodes = node.episodes.nodes;
                             for (const episode of episodes) {
                                 const i = episode === null || episode === void 0 ? void 0 : episode.number.toString().replace(/"/g, '');
@@ -396,10 +402,20 @@ class Myanimelist extends models_1.AnimeParser {
             animeInfo.image = image;
             animeInfo.description = desc;
             animeInfo.title = {
-                english: $('.js-alternative-titles.hide').children().eq(0).text().replace('English: ', '').trim(),
+                english: $('.js-alternative-titles.hide')
+                    .children()
+                    .eq(0)
+                    .text()
+                    .replace('English: ', '')
+                    .trim(),
                 romaji: $('.title-name').text(),
                 native: $('.js-alternative-titles.hide').parent().children().eq(9).text().trim(),
-                userPreferred: $('.js-alternative-titles.hide').children().eq(0).text().replace('English: ', '').trim(),
+                userPreferred: $('.js-alternative-titles.hide')
+                    .children()
+                    .eq(0)
+                    .text()
+                    .replace('English: ', '')
+                    .trim(),
             };
             animeInfo.synonyms = $('.js-alternative-titles.hide')
                 .parent()

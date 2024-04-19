@@ -18,13 +18,13 @@ type ActionData = {
 };
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Sign In' },
-  { name: 'description', content: 'Sign in to your Sora account.' },
-  { property: 'og:title', content: 'Sora - Sign In' },
-  { property: 'og:description', content: 'Sign in to your Sora account.' },
+  { title: 'AnimeNexus - Sign In' },
+  { name: 'description', content: 'Sign in to your AnimeNexus account.' },
+  { property: 'og:title', content: 'AnimeNexus - Sign In' },
+  { property: 'og:description', content: 'Sign in to your AnimeNexus account.' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/sign-in' },
-  { property: 'twitter:title', content: 'Sora - Sign In' },
-  { property: 'twitter:description', content: 'Sign in to your Sora account.' },
+  { property: 'twitter:title', content: 'AnimeNexus - Sign In' },
+  { property: 'twitter:description', content: 'Sign in to your AnimeNexus account.' },
 ]);
 
 export const action = async ({ request }: ActionFunctionArgs) => {

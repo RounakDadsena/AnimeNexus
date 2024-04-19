@@ -14,14 +14,14 @@ import MediaList from '~/components/media/MediaList';
 import { BreadcrumbItem } from '~/components/elements/Breadcrumb';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Discover anime' },
-  { name: 'description', content: 'Discover Anime on Sora' },
+  { title: 'AnimeNexus - Discover anime' },
+  { name: 'description', content: 'Discover Anime on AnimeNexus' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/discover/anime' },
-  { property: 'og:title', content: 'Sora - Discover anime' },
+  { property: 'og:title', content: 'AnimeNexus - Discover anime' },
   { property: 'og:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=anime' },
-  { property: 'og:description', content: 'Discover Anime on Sora' },
-  { name: 'twitter:title', content: 'Sora - Discover anime' },
-  { name: 'twitter:description', content: 'Discover Anime on Sora' },
+  { property: 'og:description', content: 'Discover Anime on AnimeNexus' },
+  { name: 'twitter:title', content: 'AnimeNexus - Discover anime' },
+  { name: 'twitter:description', content: 'Discover Anime on AnimeNexus' },
   { name: 'twitter:image', content: 'https://anime-nexus-six.vercel.app/api/ogimage?it=anime' },
 ]);
 

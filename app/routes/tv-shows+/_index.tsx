@@ -14,13 +14,13 @@ import { CACHE_CONTROL } from '~/utils/server/http';
 import MediaList from '~/components/media/MediaList';
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Tv Shows' },
-  { name: 'description', content: 'Discover tv shows in Sora' },
+  { title: 'AnimeNexus - Tv Shows' },
+  { name: 'description', content: 'Discover tv shows in AnimeNexus' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/tv-shows/' },
-  { property: 'og:title', content: 'Sora - Tv Shows' },
-  { property: 'og:description', content: 'Discover tv shows in Sora' },
-  { name: 'twitter:title', content: 'Sora - Tv Shows' },
-  { name: 'twitter:description', content: 'Discover tv shows in Sora' },
+  { property: 'og:title', content: 'AnimeNexus - Tv Shows' },
+  { property: 'og:description', content: 'Discover tv shows in AnimeNexus' },
+  { name: 'twitter:title', content: 'AnimeNexus - Tv Shows' },
+  { name: 'twitter:description', content: 'Discover tv shows in AnimeNexus' },
 ]);
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {

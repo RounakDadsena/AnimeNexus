@@ -21,13 +21,13 @@ type ActionData = {
 };
 
 export const meta = mergeMeta(() => [
-  { title: 'Sora - Sign Up' },
-  { name: 'description', content: 'Sign up for a Sora account.' },
-  { property: 'og:title', content: 'Sora - Sign Up' },
-  { property: 'og:description', content: 'Sign up for a Sora account.' },
+  { title: 'AnimeNexus - Sign Up' },
+  { name: 'description', content: 'Sign up for a AnimeNexus account.' },
+  { property: 'og:title', content: 'AnimeNexus - Sign Up' },
+  { property: 'og:description', content: 'Sign up for a AnimeNexus account.' },
   { property: 'og:url', content: 'https://anime-nexus-six.vercel.app/sign-up' },
-  { property: 'twitter:title', content: 'Sora - Sign Up' },
-  { property: 'twitter:description', content: 'Sign up for a Sora account.' },
+  { property: 'twitter:title', content: 'AnimeNexus - Sign Up' },
+  { property: 'twitter:description', content: 'Sign up for a AnimeNexus account.' },
 ]);
 
 export const action = async ({ request }: ActionFunctionArgs) => {
@@ -121,7 +121,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
     {
       type: 'success',
       title: 'Sign Up Successfully',
-      description: 'Welcome to Sora!',
+      description: 'Welcome to AnimeNexus!',
     },
     { headers: { 'Set-Cookie': await commitAuthCookie(authCookie) } },
   );
