@@ -172,7 +172,7 @@
     "*.{tsx,ts,jsx,js}": "pnpm run lint"
   },
   "engines": {
-    "node": ">=18"
+    "node": "x18"
   },
   "pnpm": {
     "peerDependencyRules": {
